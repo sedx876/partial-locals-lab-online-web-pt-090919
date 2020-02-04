@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-  resources :classrooms
-  resources :students
+  resources :students, only: [:index, :new, :create, :show, :edit]
+  resources :classrooms, only: [:show, :index]
 end
